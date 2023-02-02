@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+</head>
+<style>
+ #black{
+        
+        width:400px;
+        height:400px;
+    
+        background-color: black;
+        position:relative;
+          
+
+    }
+    #red{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red; 
+    }
+    
+
+    
+</style>
+<body>
+    
+<p><button onclick="animation()">Click Me</button></p>
+    <div id="black">
+        <div id="red">
+    
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        function animation(){
+            
+            var ani = document.getElementById("red");   
+            var ctr= 0;
+        
+            var id = setInterval(move, 5);
+            function move() {
+              if (ctr==350) {
+                clearInterval(id);
+              } 
+              else {
+                ctr++; 
+                ani.style.top = ctr+ "px"; 
+                ani.style.left = ctr+ "px";
+                ani.style.top = ctr+ "px"; 
+                ani.style.right = ctr+ "px";
+                
+              }
+            }
+        }
+    </script>
+</body>
+</html>
